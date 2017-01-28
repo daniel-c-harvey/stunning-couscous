@@ -1,13 +1,22 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>Testing git</title>
+
 <script>
-  function void changeText()  {
-    dom.Document.body.p.innerHTML()="This should be different";
+  function changeText()  {
+    document.getElementById("changeThis").innerHTML = 'this  should change';
+  }
+  
+  function colorText(newcolor) {
+	document.getElementById("changeThis").style.color = newcolor;
   }
 </script>
+
 </head>
 <body>
-<p onclick="changeText()">Big Ole Git Test</p>
+
+<button id="changeThis" onclick="changeText(); colorText('purple')">Big Ole Git Test</button>
+
 </body>
 </html>
